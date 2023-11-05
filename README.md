@@ -1,65 +1,95 @@
-# Phase 1 Project
 
-You've made it all the way through the first phase of this course - take a minute to celebrate your awesomeness!
 
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-1-project/master/awesome.gif)
+# Showtime Success: Microsoft's Film Studio Strategy through Data
 
-Now you will put your new skills to use with a large end-of-Phase project! This project should take 20 to 30 hours to complete.
+**Author**: [Muhsin Ahmed Abdule](mailto:muhsin.ahmed@student.moringaschool.com)
 
 ## Project Overview
 
-For this project, you will use exploratory data analysis to generate insights for a business stakeholder.
+In this project , I aim to provide actionable insights to Microsoft which is venturing into the film industry through establishing a new studio.Microsoft is a giant in the technology sector however they lack experience when it come to the film industry.The projects's Objectives is to explore the movie industry and identify which film types are doing the best at the box office
 
 ### Business Problem
 
-Microsoft sees all the big companies creating original video content and they want to get in on the fun. They have decided to create a new movie studio, but they don’t know anything about creating movies. You are charged with exploring what types of films are currently doing the best at the box office. You must then translate those findings into actionable insights that the head of Microsoft's new movie studio can use to help decide what type of films to create.
+The main business problem is that Microsoft wants to venture into a competitive Market without the prior experience of the industry.To address the problem,this project explores and answers several questions to provide actionable insights:
 
-### The Data
+Which genre selection are currently the most successful?
+Is there a Relationship between Profits and movie budgets?
+Is there a Relationship between Rating,number of votes and profits made?
+What is the trend of profits across years?
 
-In the folder `zippedData` are movie datasets from:
+### Data understanding
 
-* [Box Office Mojo](https://www.boxofficemojo.com/)
-* [IMDB](https://www.imdb.com/)
-* [Rotten Tomatoes](https://www.rottentomatoes.com/)
-* [TheMovieDB](https://www.themoviedb.org/)
-* [The Numbers](https://www.the-numbers.com/)
+The data used for this project comes from the following websites:
 
-It is up to you to decide what data from this to use and how to use it. If you want to make this more challenging, you can scrape websites or make API calls to get additional data. If you are feeling overwhelmed or behind (e.g. struggled with the Phase 1 Code Challenge), we recommend you use only the following data files:
+1.IMDB: i used the IMDB to access two datasets i.e imdb.title.basics that contains fundamental information about movies,imdb.title.ratings that contains rating information about movies
 
-* imdb.title.basics
-* imdb.title.ratings
-* bom.movie_gross
+2.Box Office Mojo (BOM):I used the bom.movie_gross that contains earnign values for movies at the box office
 
-## Deliverables
+3.The Numbers (TN): tn.movie_budgets this dataset contains information on the production budget
 
-There are three deliverables for this project:
+These datasets are relevant to our data analysis questions.They allow us to explore and the film industry in relation to its financial success and other aspects.The data provides insights that can guide Microsoft's studio to create new films and  navigate through the film industry and make huge profits
 
-* A **GitHub repository**
-* A **Jupyter Notebook**
-* A **non-technical presentation**
+The data represents movies with each row corresponding to a unique film.The sample include wide range of movies from different Genres,Start_year and production Budgets
 
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic for instructions on creating and submitting your deliverables. Refer to the rubric associated with this assignment for specifications describing high-quality deliverables.
+The Target variable for this analysis is on  the Profit Made which can be calculated through analysis of the box office and the production Budgets
+properties of the key variables include:
+The imdb.title.basics dataset includes variables like movie titles, genres, and Start years.
+The imdb.title.ratings dataset provides information about movie average_rating and the number of votes
+The bom.movie_gross dataset contains variables for movie titles, studio names, and domestic and foreign gross earnings
+The tn.movie_budgets dataset has variables such as movie titles, production budgets, and domestic and worldwide gross earnings.
 
-### Key Points
 
-* **Your analysis should yield three concrete business recommendations.** The ultimate purpose of exploratory analysis is not just to learn about the data, but to help an organization perform better. Explicitly relate your findings to business needs by recommending actions that you think the business (Microsoft) should take.
 
-* **Communicating about your work well is extremely important.** Your ability to provide value to an organization - or to land a job there - is directly reliant on your ability to communicate with them about what you have done and why it is valuable. Create a storyline your audience (the head of Microsoft's new movie studio) can follow by walking them through the steps of your process, highlighting the most important points and skipping over the rest.
+## Methods
+This project uses the following Methods
 
-* **Use plenty of visualizations.** Visualizations are invaluable for exploring your data and making your findings accessible to a non-technical audience. Spotlight visuals in your presentation, but only ones that relate directly to your recommendations. Simple visuals are usually best (e.g. bar charts and line graphs), and don't forget to format them well (e.g. labels, titles).
+Data Cleaning and Preprocessing: Cleaned and preprocessed the data, addressing missing values, duplicated records, and data type conversions. This is done to prepare the data for analysis
 
-## Getting Started
+Data Exploration: Performed Exploratory analysis (EDA) and feature engineering to understand and configure the characteristics of the data and identify patterns.
 
-Please start by reviewing this assignment, the rubric at the bottom of it, and the "Project Submission & Review" page. If you have any questions, please ask your instructor ASAP.
+Data Visualization: Visualizating the data contributed immensely to our insights, providing clear and impactful representations of data trends
 
-Next, we recommend you check out [the Phase 1 Project Templates and Examples repo](https://github.com/learn-co-curriculum/dsc-project-template) and use the MVP template for your project.
+## Results
 
-Alternatively, you can fork [the Phase 1 Project Repository](https://github.com/learn-co-curriculum/dsc-phase-1-project), clone it locally, and work in the `student.ipynb` file. Make sure to also add and commit a PDF of your presentation to your repository with a file name of `presentation.pdf`.
+During the analysis we observed that genres such as 'Adventure' and 'Sci-Fi' exhibit the highest production budgets. Interestingly, these genres also demonstrate the potential to generate substantial revenue, which positions them as promising choices for Microsoft's movie studio.We also discovered that movies released in the summer and around the holiday season tend to perform better at the box office.
 
-## Project Submission and Review
+![Most Profitable Genre](highest_grossing.png)
 
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic to learn how to submit your project and how it will be reviewed. Your project must pass review for you to progress to the next Phase.
+![Distribution of Profit by season](Season_vs_Profits.png)
 
-## Summary
+![Relationship between Budget and Profit](Budget_vs_Profits.png)
 
-This project will give you a valuable opportunity to develop your data science skills using real-world data. The end-of-phase projects are a critical part of the program because they give you a chance to bring together all the skills you've learned, apply them to realistic projects for a business stakeholder, practice communication skills, and get feedback to help you improve. You've got this!
+
+Our actionable insights suggest that Microsoft should consider investing in 'Adventure' and 'Sci-Fi' genres particularly during peak release periods for maximum profit. Additionally, partnering with well-established studios or co-producing films with experienced industry players could enhance the chances of success.
+
+![Top Studio performance](Studio_vs_Profit.png)
+
+
+As a result of our analysis, we recommend that Microsoft focuses on producing high-quality films in the 'Adventure' and 'Sci-Fi' genres. We also suggest exploring collaboration opportunities with successful studios to leverage their industry expertise.
+
+
+
+## Conclusion
+
+This analysis leads to these recommendations to help microsoft decide the type of films to create:
+
+Genre selection:Focus on "sci-fi" and "animation" genres for film production.These two genres have had highest worlwide Gross revenue at the box office."sci-fi" genre as shown strong popularity among audience as it received the highest votes.This indicates strong audience preference.
+
+Strategic Timing: Microsoft should strategically time their film releases, aiming for the summer and holiday seasons. This can optimize box office earnings and overall performance.
+
+Combined_Genre Selection: Focus on 'Adventure, Drama, Sci-Fi' genres combination for film production, as this genres have shown strong poplarity ,high rating and high box office performance, indicating significant audience interest.it has been the most successful genre combination at box office currently.
+
+High-Engagement Genres: Invest in a strong social media presence to reach a diverse international audience. Prioritize creating films genres that are apealing  and quality such as "sci-fi" genre.This engages the audience, as movies with a high number of votes tend to perform well at the box office. This approach can lead to increased audience engagement and higher box office returns.
+
+Budget Allocation for Maximum Profit: consider allocating a larger budgets to produce high Quality films in the genres such as Adventure or Sci-fi genres.Genres that had a well production budget for a movie had higher worldwide Gross and profits. 
+
+Collaboration with Studios: Explore collaboration opportunities with successful studios like P/DW and BV studios , as they have demonstrated high total gross revenues. Such partnerships have the potential to enhance profitability.Building strategic partnerships with successful studios can provide opportunities for co-productions and co-distribution can as well increase your audience.
+
+
+## Next steps
+
+Further analyses could yield additional insights to help microsoft's studio create films:
+
+Better understanding of content themes.This modeling could analyze the most common themes in the specified genres that are apealing to audience.This can be useful in crafting relevant and captivating storylines.
+
+Better Understanding of audience.This modeling can help understand the age distribution,gender distribution and locations of our audience in order to develope marketing strategies to help make higher revenues.
